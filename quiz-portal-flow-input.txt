@@ -1,0 +1,165 @@
+Full flow -- Quiz Portal -- valid test acses only
+
+Sign-up
+
+{
+  "is_admin": 0,
+  "name": "john",
+  "password": "john123",
+  "username": "john"
+}
+
+
+Login
+{
+  "password": "john123",
+  "username": "john"
+}
+
+Response body
+{
+  "message": "User  john with session_id 8ff9b87d-6539-4a25-a5c2-5188740a54fe is successfully logged in"
+}
+
+
+{
+  "password": "admin",
+  "username": "admin"
+}
+
+	
+Response body
+{
+  "message": "User  admin with session_id b46cbe09-6851-4890-9632-12ff8b364ff0 is successfully logged in"
+}
+
+
+admin session id: 'b46cbe09-6851-4890-9632-12ff8b364ff0'
+john session id: '8ff9b87d-6539-4a25-a5c2-5188740a54fe'
+john user id: '27238af8-c732-42d3-b889-c0ba8ccff9b2'
+
+
+Assign Quiz
+{
+  "quiz_id": "ca3c5782-78e1-474f-8812-7a732b5202e5",
+  "session": "b46cbe09-6851-4890-9632-12ff8b364ff0",
+  "user_id": "27238af8-c732-42d3-b889-c0ba8ccff9b2"
+}
+
+	
+Response body
+{
+  "message": "Quiz has been successfully assigned to user "
+}
+
+
+Attempt Quiz
+{
+  "quiz_id": "ca3c5782-78e1-474f-8812-7a732b5202e5",
+  "responses": {"2c0bd558-6f09-4c2e-8bcb-41ee56e6e288":1, "5c2c5671-6c70-4546-921a-61ae3296a0e6":3},
+  "session": "8ff9b87d-6539-4a25-a5c2-5188740a54fe"
+}
+
+	
+Response body
+{
+  "message": "Quiz has been successfully attempted and user score is: 5"
+}
+
+
+Quiz Results
+{
+  "quiz_id": "ca3c5782-78e1-474f-8812-7a732b5202e5",
+  "session": "b46cbe09-6851-4890-9632-12ff8b364ff0"
+}
+
+	
+Response body
+{
+  "results": [
+    {
+      "is_submitted": 1,
+      "score_achieved": 5,
+      "user_id": "1cf5a0a4-a7eb-4bda-8664-af1cadc6027d"
+    },
+    {
+      "is_submitted": 1,
+      "score_achieved": 5,
+      "user_id": "27238af8-c732-42d3-b889-c0ba8ccff9b2"
+    },
+    {
+      "is_submitted": 0,
+      "score_achieved": 0,
+      "user_id": "47bc078f-88c8-4849-a741-f50854269f65"
+    }
+  ]
+}
+
+View All Quiz
+{
+  "session": "b46cbe09-6851-4890-9632-12ff8b364ff0"
+}
+
+{
+  "results": [
+    {
+      "quiz_id": "3d9ead8b-1e66-466f-94f9-eb91d61888b3",
+      "quiz_name": "quiz_1"
+    },
+    {
+      "quiz_id": "5f715919-0d5e-4a37-b42f-55bb1278e6a1",
+      "quiz_name": "quiz_2"
+    },
+    {
+      "quiz_id": "ca3c5782-78e1-474f-8812-7a732b5202e5",
+      "quiz_name": "quiz_3"
+    },
+    {
+      "quiz_id": "cbc994d8-6050-45f6-b18c-626edfacc9fa",
+      "quiz_name": "quiz_3"
+    },
+    {
+      "quiz_id": "cedb49a5-c185-4e20-9374-85aa0dc74e1b",
+      "quiz_name": "quiz_3"
+    },
+    {
+      "quiz_id": "eda25060-835f-401b-a24c-3f1b0dcfb009",
+      "quiz_name": "quiz_3"
+    }
+  ]
+}
+
+View Assigned quiz
+
+{
+  "session": "8ff9b87d-6539-4a25-a5c2-5188740a54fe"
+}
+
+	
+Response body
+{
+  "results": [
+    {
+      "is_submitted": 1,
+      "quiz_id": "ca3c5782-78e1-474f-8812-7a732b5202e5",
+      "quiz_name": "quiz_3",
+      "score_achieved": 5
+    }
+  ]
+}
+
+Create Quiz
+{
+  "question_ids": [
+    "2e70a897-95f9-4a94-ac54-7e5b0100a2c1", "76c85870-08ad-41ac-8a63-052b0e0451fc", "e1ecec1b-a5ba-4906-acdc-866652d3274b",
+    "f6dc7ef4-8f1b-407f-ad6f-accc099a0fa0"
+  ],
+  "quiz_name": "quiz-4",
+  "session": "b46cbe09-6851-4890-9632-12ff8b364ff0"
+}
+
+	
+Response body
+{
+  "message": "Quiz has been successfully created"
+}

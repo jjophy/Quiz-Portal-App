@@ -1,0 +1,149 @@
+Full flow -- Quiz Portal -- all test cases
+
+Sign-up
+
+{
+  "is_admin": 0,
+  "name": "jane",
+  "password": "jane123",
+  "username": "jane"
+}
+
+	
+Response body
+Download
+{
+  "message": "User jane is successfully registered"
+}
+
+
+{
+  "is_admin": 1,
+  "name": "admin-user",
+  "password": "admin",
+  "username": "admin"
+}
+
+	
+Response body
+Download
+{
+  "message": "User admin is successfully registered"
+}
+
+
+Login
+{
+  "password": "admin",
+  "username": "admin"
+}
+
+{
+  "message": "User  admin with session_id 1e13dd75-2318-45f6-a0d3-f3e8008d6507 is successfully logged in"
+}
+
+{
+  "password": "admin",
+  "username": "admin"
+}
+
+{
+  "message": "Not able to login user : User already logged in and has an active session"
+}
+
+{
+  "password": "jane123",
+  "username": "john"
+}
+
+{
+  "message": "Not able to login user : User not found..need to sign up"
+}
+
+{
+  "password": "jane123",
+  "username": "jane"
+}
+
+Response body
+{
+  "message": "User  jane with session_id 2f1210cc-2ced-4529-840f-6c121ce685d1 is successfully logged in"
+}
+
+jane
+{
+  "quiz_id": "9f7d157c-e87e-4a1a-a85b-6a4b30c4a3f1",
+  "session": "2f1210cc-2ced-4529-840f-6c121ce685d1"
+}
+	
+Response body
+Download
+{
+  "results": [
+    {
+      "answer": 3,
+      "choice1": "Mumbai",
+      "choice2": "Chennai",
+      "choice3": "Delhi",
+      "choice4": "Kolkatta",
+      "marks": 10,
+      "question": "capital of India",
+      "question_id": "28631bed-f538-4204-95f0-af23984182e9",
+      "remarks": "country capital"
+    },
+    {
+      "answer": 1,
+      "choice1": "5",
+      "choice2": "4",
+      "choice3": "3",
+      "choice4": "2",
+      "marks": 5,
+      "question": "If x = 9 and y = 4, that what is x-y?",
+      "question_id": "2c0bd558-6f09-4c2e-8bcb-41ee56e6e288",
+      "remarks": "Subtraction Question"
+    }
+  ]
+}
+
+
+{
+  "quiz_id": "9f7d157c-e87e-4a1a-a85b-6a4b30c4a3f1",
+  "responses": {"28631bed-f538-4204-95f0-af23984182e9":3,"2c0bd558-6f09-4c2e-8bcb-41ee56e6e288":1},
+  "session": "2f1210cc-2ced-4529-840f-6c121ce685d1"
+}
+
+
+{
+  "message": "Quiz has been successfully attempted and user score is: 15"
+}
+
+jane
+{
+  "session": "2f1210cc-2ced-4529-840f-6c121ce685d1"
+}
+
+{
+  "results": [
+    {
+      "is_submitted": 1,
+      "quiz_id": "9f7d157c-e87e-4a1a-a85b-6a4b30c4a3f1",
+      "quiz_name": "quiz-1",
+      "score_achieved": 15
+    }
+  ]
+}
+
+admin
+{
+  "quiz_id": "9f7d157c-e87e-4a1a-a85b-6a4b30c4a3f1",
+  "session": "1e13dd75-2318-45f6-a0d3-f3e8008d6507"
+}
+
+seema
+
+session: a69c2b31-3a05-4e70-ad5b-4b37aceb96ca
+
+user_id: 2ca64c29-516b-4026-9074-a2fd65f53c1b
+
+
+
