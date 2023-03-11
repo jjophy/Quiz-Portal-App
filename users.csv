@@ -1,0 +1,12 @@
+Name,UserName,Password,Is_admin ,Is_active
+Admin,admin,admin,1,1
+User1,user1,user_pw_1,0,1
+User2,user2,user_pw_2,0,1
+User3,user3,user_pw_3,0,1
+User4,user4,user_pw_4,0,1
+User5,user5,user_pw_5,0,1
+User6,user6,user_pw_6,0,1
+User7,user7,user_pw_7,0,1
+User8,user8,user_pw_8,0,1
+User9,user9,user_pw_9,0,1
+User10,user10,user_pw_10,0,1
